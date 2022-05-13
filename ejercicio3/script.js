@@ -1,7 +1,7 @@
 function calcularDiasFaltantes(){
 	const fechaActual = new Date();
-	const dia = 16;
-	let mes = 7;
+	const dia = fechaActual.getDate();
+	let mes = fechaActual.getMonth();
 	const diasMeses = [31,28,31,30,31,30,31,31,30,31,30,31];
 
 	let diasFaltantes = 0;
