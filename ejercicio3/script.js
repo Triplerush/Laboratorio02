@@ -6,11 +6,13 @@ function calcularDiasFaltantes(){
 
 	 let diasFaltantes = 0;
 
-	for(let i = mes; i < 7; i++){
+	for(let i = mes; i != 7; i++){
 	  diasFaltantes += diasMeses[i];
+		if(i == 11){
+			i = 0;
+		}
 	}
 	
 	diasFaltantes += 15 - dia;
-
-	console.log(diasFaltantes);
+	document.getElementById('resultado').innerHTML = "Faltan " +diasFaltantes + " para el día de Arequipa";
 }
